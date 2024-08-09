@@ -1,3 +1,44 @@
-site_name: My Docs
+#[Info]
+site_name: cxyhuky's blog
+site_url: https://cxyhuky.github.io/
+site_author: Kangying Hu
+
+copyright: Copyright &copy; 2024 - 2024 Kangying Hu
+#[Config]
+#[Repo Config]
+repo_url: https://github.com/cxyhuky/cxyhuky.github.io 
+repo_name: Kangying Hu's Blog
+
+#[扩展]
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/cxyhuky
+
+        - icon: fontawesome/solid/paper-plane
+          link: mailto:cxyhuky@gmail.com
+
+
+
+#[UI]
 theme:
-    name: 'material'
+    name: 'material'                            #主题名
+    palette:
+        primary: indigo
+    icon:
+        repo: fontawesome/brands/github         #指定仓库图标
+    features:
+        - navigation.tabs                       #在header中添加导航条
+        - navigation.tabs.sticky
+        - navigation.top                        #回到顶部
+        - navigation.path
+        - navigation.instant
+
+nav:
+    - code-complete: 
+        - 新世界: codecomplete/code-complete.md
+    - Reading:
+        - Computer Network: 
+            - Application Layer: Reading/computer-network/application-layer.md
+            - Physical Layer: Reading/computer-network/physical-layer.md
+            - Data Link Layer: Reading/computer-network/data-link-layer.md
