@@ -1,5 +1,5 @@
 #[Info]
-site_name: cxyhuky's blog
+site_name: cxyhuky
 site_url: https://cxyhuky.github.io/
 site_author: Kangying Hu
 
@@ -23,22 +23,57 @@ extra:
 #[UI]
 theme:
     name: 'material'                            #主题名
+    favicon: assets/logo/cxyhuky-icon.png
     palette:
         primary: indigo
     icon:
+        logo: material/state-machine
         repo: fontawesome/brands/github         #指定仓库图标
     features:
         - navigation.tabs                       #在header中添加导航条
         - navigation.tabs.sticky
-        - navigation.top                        #回到顶部
+        - navigation.top                        #回到顶部 
         - navigation.path
         - navigation.instant
+        - navigation.indexes
+        - navigation.prune
+        - navigation.sections
+
+plugins:
+  - autorefs
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+  - blog:
+        draft: true
+#   - minify:
+#       minify_html: true
+#   - bibtex:
+#       bib_file: "docs/references.bib"
+#       csl_file: "docs/ieee.csl"
+#       cite_inline: false
+        
 
 nav:
-    - code-complete: 
-        - 新世界: codecomplete/code-complete.md
+    - Abount: index.md 
+    - Computer Science:
+        - cs/index.md
+        - Network:
+            - cs/network/application-layer.md
+            - cs/network/data-link-layer.md
+        - OS:
+            - cs/os/learn.md
+    - Software Engineering:
+        - se/index.md
     - Reading:
-        - Computer Network: 
-            - Application Layer: Reading/computer-network/application-layer.md
-            - Physical Layer: Reading/computer-network/physical-layer.md
-            - Data Link Layer: Reading/computer-network/data-link-layer.md
+        - reading/index.md
+    - Bugs Archive:
+        - bugs-archive/index.md
+    - Tools:
+        - tools/index.md
+    - Blog:
+        - blog/index.md
