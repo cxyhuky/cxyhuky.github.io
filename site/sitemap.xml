@@ -26,6 +26,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://cxyhuky.github.io/cs/network/application-layer/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cxyhuky.github.io/cs/network/data-link-layer/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cxyhuky.github.io/cs/os/learn/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://cxyhuky.github.io/reading/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
