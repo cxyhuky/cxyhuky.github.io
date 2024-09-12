@@ -1,17 +1,15 @@
 # About
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Hello，Welcome to cxyhuky's blog.
 
-## Commands
+I am a server-side programmer.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+这只是一个开始！
 
-## Project layout
+## Hobby
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+outdoors, mountain climbing, on foot.
+
+I hope to complete my first snow mountain climb in 2025.
+
+<img src=".\assets\images\touxiang.png" style="zoom:40%;" />

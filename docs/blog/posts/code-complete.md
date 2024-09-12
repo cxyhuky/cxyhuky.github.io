@@ -3,7 +3,8 @@ title: Code-Complete
 draft: false
 authors: [huyi]
 date: 2024-08-10
-slug: chance
+slug: code-complete
+description: 记录并总结常见技术概念和技术知识。
     以下所言，或来自读书笔记，或来自书籍的勾画，或只是回忆...作为参考。
 categories:
   - 学习笔记

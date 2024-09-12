@@ -38,6 +38,7 @@ theme:
         - navigation.indexes
         - navigation.prune
         - navigation.sections
+        - search.suggest
 
 plugins:
   - autorefs
@@ -50,6 +51,7 @@ plugins:
         - tags
   - blog:
         draft: true
+  - search:
 #   - minify:
 #       minify_html: true
 #   - bibtex:
