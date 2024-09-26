@@ -825,6 +825,8 @@
       
         
       
+        
+      
     
     
       
@@ -941,6 +943,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../category/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    技术书籍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="../../category/%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%AF%E8%AF%AD%E8%A7%A3%E9%87%8A/" class="md-nav__link">
         
   
@@ -1002,6 +1027,158 @@
       <header class="md-typeset">
         <h1 id="2024">2024</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/93192341?v=4" alt="Kangying Hu">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-09-25 00:00:00">September 25, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" class="md-meta__link">技术书籍</a>, 
+              <a href="../../category/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-meta__link">学习笔记</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="chapter-3-methods-common-to-all-objects"><a class="toclink" href="../../2024/09/25/effectivejava/">Chapter 3. Methods Common to All Objects</a></h2>
+<h3 id="item10-equals"><a class="toclink" href="../../2024/09/25/effectivejava/#item10-equals">Item10. 覆盖equals方法时应遵守的约定</a></h3>
+<blockquote>
+<p>本条目讨论是否覆盖equals时应该注意的点，即什么情况下不需要覆盖equals，若覆盖equals需要遵守的约定；以及覆盖不合理所导致的后果。</p>
+</blockquote>
+<hr />
+<p><code>java.lang.Object</code>类提供了<code>equals</code>的默认实现（比较对象引用是否相等），<strong>类的每个实例只等于它自己</strong>。</p>
+<p>绝大部分情况下，值类都是需要覆盖equals实现，如果不需要覆盖equals，类应该符合以下几种条件：</p>
+<ul>
+<li><strong>类的每个实例都是唯一的</strong>，对于像Thread这类表示活动实体类也是如此，Object的默认实现就满足此要求</li>
+<li>对于<strong>不需要提供【逻辑相等】的类</strong></li>
+<li><strong>超类已经实现equals，并且对于子类完全适用</strong></li>
+<li>类是私有的，并且你<strong>确保该equals方法永远不会被调用</strong></li>
+</ul>
+<p>如果需要类需要实现<strong>逻辑相等</strong>这类概念时（e.g. <code>Map</code>中作为key存在时），则需要覆盖其<code>equals</code>方法。以下是覆盖equals时遵守的<strong>通用约定</strong>：</p>
+<ul>
+<li><strong>反身性</strong>：x.equals(x)必须返回true</li>
+<li><strong>对称性</strong>：x.equals(y)必须在y.equals(x)返回true时返回true</li>
+<li>e.g.<code>java.sql.TimeStamp</code>继承自<code>java.util.Date</code>，如果在同一个集合中使用时间戳和日期对象，或者以其他方式混合使用时间戳和日期对象，那么时间戳的 equals 实现确实违反了对称性</li>
+<li><strong>传递性</strong>：x.equals(y)，y.equals(z)，则x.equals(z)必须满足</li>
+<li>除非你愿意放弃面向对象的抽象优点，否则<strong>无法</strong>继承一个可实例化的类并添加新属性时，并同时保留equals约定（传递性）</li>
+<li>可以考虑使用抽象类的子类添加一个值组件或者不采用继承转而采用组合的方式实现</li>
+<li><strong>一致性</strong>：x.equals(y)的多次调用结果必须一致</li>
+<li>无论一个类是否不可变，都<strong>不要编写依赖于不可靠资源的equals方法</strong>，如果违反则很难满足一致性。e.g. <code>java.net.URL#equals()</code>方法依赖于与URL相关联的主机的IP地址的比较</li>
+<li><strong>x.equals(null)必须false</strong></li>
+<li><code>instanceof</code>自带判定null的能力，即 obj=null, obj instanceof Object 一定是false</li>
+</ul>
+<p>综上所述，构建高质量equals方法的秘诀（按照顺序）：</p>
+<ol>
+<li>
+<p>使用<code>==</code>检查参数是否是该对象的引用</p>
+</li>
+<li>
+<p>使用instanceof检查参数类型是否正确</p>
+</li>
+<li>
+<p>将参数转为正确类型，并对类中的每个【重要】字段检查对应的字段值是否匹配</p>
+</li>
+</ol>
+<blockquote>
+<p>注：重要字段可以理解为类继承结构中，使用最多，最通用的字段。对于float或double等字段，使用<code>Float.compare(float, float)</code>方法比较</p>
+</blockquote>
+<p>不比较不属于对象逻辑状态的字段，例如同步操作的锁字段，优先比较那些更可能不同、比较成本更低的字段。</p>
+<p>写完问自己三个问题：它具备对称性吗？具备传递性吗？具备一致性吗？并编写UT来检查</p>
+<hr />
+<h3 id="item11-hashcodeequals"><a class="toclink" href="../../2024/09/25/effectivejava/#item11-hashcodeequals">Item11. hashCode总是同equals一起覆盖</a></h3>
+<blockquote>
+<p>讨论hashCode()方法的一般约定，为什么hashCode要同equals一起覆盖？有什么比较好的hash值生成方法？hash生成中要避免的点有哪些？</p>
+</blockquote>
+<p><code>java.lang.Object#hashCode</code>中明确指出：使用hashCode方法是为了便于使用哈希表（类实例如果有使用到hash表，则需要使用此方法生成hashCode）</p>
+<p>由于在hash表中，总是结合使用equals和hashCode方法来判断对象是否相等，所以，hashCode方法的一般约定总是与equals有关，具体如下：</p>
+<ol>
+<li>同一对象多次调用<code>hashCode()</code>，<strong>必须</strong>始终返回<strong>相同</strong>的hash值（前提是用于equals比较的信息未修改）</li>
+<li>若两个对象通过equals比较相等(true)，则它们的hash值必须一致</li>
+<li>若两个对象通过equals比较不相等，则不强制要求hash值必须一致；但程序员必须意识到，对<strong>不相等的对象产生不同的hash值可以提供hash表的性能</strong></li>
+</ol>
+<p>理想情况下，一个散列算法应该在所有int值上均匀合理分布所有不相等实例集合。实现该理想很困难，但幸运的是实现一个类似的并不太难，方法如下：</p>
+<ol>
+<li>
+<p>声明一个result的int变量，并将其初始化为对象中第一个重要字段的散列码c</p>
+</li>
+<li>
+<p>对象中剩余的重要字段f，执行以下操作</p>
+</li>
+<li>
+<p>为字段计算一个整数散列码c</p>
+<ol>
+<li>若字段为基本类型，计算<code>Type.hashCode(f)</code>，其中<code>type</code>是与f类型对应的包装类</li>
+<li>若字段为对象引用，调用其hashCode，若字段值为null，则使用0</li>
+<li>若字段是一个数组，则将其每个重要元素都视为一个单独的字段，循环的计算每个元素的hash值，若数组中没有重要元素，则使用常量（最好不是0），如果所有元素都重要，则使用<code>Arrays.hashCode</code></li>
+</ol>
+</li>
+<li>
+<p>将步骤1中计算的散列码c合并到result变量</p>
+<p><code>java
+  //31 是一个常用的质数，它能在哈希值的计算中产生较好的分布效果，避免哈希冲突
+  result = 31 * result + c;</code></p>
+</li>
+<li>
+<p>返回result变量</p>
+</li>
+<li>
+<p>完成hashCode方法的编写后，尝试相同的实例是否具有相同的hash值，并编写UT来验证</p>
+</li>
+</ol>
+<p>hash值的生成还要考虑以下几点：</p>
+<ol>
+<li>
+<p><strong>不要试图从散列码计算中排除重要字段</strong>，以提高性能；这<strong>会导致不好的hash分布，影响散列表的性能</strong></p>
+</li>
+<li>
+<p>若一个类是<strong>不可变</strong>的，并且<strong>散列码的计算成本很高</strong>，可以考虑在对象中<strong>缓存散列码</strong></p>
+</li>
+</ol>
+<p>```java
+   private int hashCode; // Automatically initialized to 0
+   @Override
+   public int hashCode() {
+       int result = hashCode;
+       //no cache
+       if (result == 0) {
+           result = Short.hashCode(areaCode);
+           result = 31 * result + Short.hashCode(prefix);
+           result = 31 * result + Short.hashCode(lineNum);
+           hashCode = result; // set cache
+       }</p>
+<pre><code>   return result;
+</code></pre>
+<p>}
+   ```</p>
+<ol>
+<li><strong>不要为hashCode返回的值提供详细的规范，这样客户端就不能理所应当的依赖它，这也为你以后可能的更改留有余地。</strong>Java库中很多类，e.g. String和Integer，都将hashCode返回的确切值指定为实例值，这不是一个好主意，它阻碍了未来版本中提高散列算法的能力</li>
+</ol>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">

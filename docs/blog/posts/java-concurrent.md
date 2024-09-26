@@ -9,7 +9,6 @@ description: 关于Java并发编程的一些知识总结与整理
 categories:
   - 学习笔记
   - 并发
-  - Java
 ---
 
 关于Java并发编程的一些知识总结与整理。 <!-- more -->

@@ -1,18 +1,18 @@
 ---
-title: effectivejava
+title: Methods Common to All Objects 
 draft: false
 authors: [huyi]
 date: 2024-09-25
-slug: effectivejava
+slug: effectivejava-chapter3
 description: Effective-Java阅读笔记
     以下所言，或来自读书笔记，或来自书籍的勾画，或只是回忆...作为参考。
 categories:
   - 技术书籍
-  - 笔记
-  - Java
+  - 学习笔记
+
 ---
 
-阅读effective-java总结的一些笔记，先把书读厚，再把书读薄！ <!-- more -->
+effective-java阅读笔记，第三章——对象的通用方法 <!-- more -->
 
 # Chapter 3. Methods Common to All Objects 
 
@@ -107,29 +107,62 @@ categories:
 hash值的生成还要考虑以下几点：
 
 1. **不要试图从散列码计算中排除重要字段**，以提高性能；这**会导致不好的hash分布，影响散列表的性能**
-
 2. 若一个类是**不可变**的，并且**散列码的计算成本很高**，可以考虑在对象中**缓存散列码**
 
-   ```java
-   private int hashCode; // Automatically initialized to 0
-   @Override
-   public int hashCode() {
-       int result = hashCode;
-       //no cache
-       if (result == 0) {
-           result = Short.hashCode(areaCode);
-           result = 31 * result + Short.hashCode(prefix);
-           result = 31 * result + Short.hashCode(lineNum);
-           hashCode = result; // set cache
-       }
-       
-       return result;
-   }
-   ```
+```java
+private int hashCode; // Automatically initialized to 0
+@Override
+public int hashCode() {
+    int result = hashCode;
+    //no cache
+    if (result == 0) {
+        result = Short.hashCode(areaCode);
+        result = 31 * result + Short.hashCode(prefix);
+        result = 31 * result + Short.hashCode(lineNum);
+        hashCode = result; // set cache
+    }
+    
+    return result;
+}
+```
 
 3. **不要为hashCode返回的值提供详细的规范，这样客户端就不能理所应当的依赖它，这也为你以后可能的更改留有余地。**Java库中很多类，e.g. String和Integer，都将hashCode返回的确切值指定为实例值，这不是一个好主意，它阻碍了未来版本中提高散列算法的能力
 
 
 
+## Item12. 始终覆盖toString方法
 
+> 本条目讨论覆盖toString方法的好处是什么，为什么一定要覆盖
+
+toString的通用约定：返回的字符串应该符合**"简洁但信息丰富，易于阅读"**。
+
+覆盖toString方法的好处及一些覆盖的建议：
+
+- **更易于使用**(被打印时更好的展示)，使用该类的系统也**更易于调试**(日志错误消息中更好的展示)
+- toString返回的信息中应该**包含最适合该类的表示形式**，e.g. Phone类应该返回"xxxx-xxxx-xxxx"这种格式的内容，若类的对象很大且包含不利于展示的内容，toString应该返回一个**摘要信息**
+- 决定**是否对toString返回的内容指定<font color="red">格式</font>**
+  - 优点：作为类的**标准的、明确的**表示，**可以作为输入或输出**，还可以提供一个匹配的静态工厂(valueOf)或构造器，来达到对象及其字符串标识之间来回的切换，e.g. java中BigInteger和大多数包装类就是这样实现的。
+  - 缺点：一旦指定则必须**终生使用**它，若你的类被广泛使用，则后续修改toString的格式将会破坏引用该类的代码和数据。若不选择格式，增加了在后续版本中添加信息或改进格式的灵活性
+- 指定/不指定格式，你都**应该为toString提供详细的文档注释**
+- **提供对toString返回值中包含的信息的程序性访问（即getter方法）**，否则引用者不得不通过解析toString来获取他们的值，这种方式会让系统脆弱
+- **在任何抽象类中编写toString方法**，并让子类共享公共的字符串表示形式
+
+
+
+## Item13. 明智的覆盖clone
+
+若想调用Object.clone()方法来实现克隆，则类必须实现Cloneable接口，否则将抛出CloneNotSupportedException异常。
+
+如果不是通过Object.clone()方法实现克隆的，则不需要实现Cloneable接口。如下：
+
+```java
+class Base {
+    @Override
+    protected Object clone() throw CloneNotSupportedException {
+        //这种情况下会抛出CloneNotSupportedException，因为调用的是Object.clone()方法
+        //return super.clone(); 
+        return new Base(); //这种方式可不实现Cloneable接口
+    }
+}
+```
 
