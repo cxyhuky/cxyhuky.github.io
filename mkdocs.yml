@@ -3,7 +3,7 @@ site_name: cxyhuky
 site_url: https://cxyhuky.github.io/
 site_author: Kangying Hu
 
-copyright: Copyright &copy; 2024 - 2024 Kangying Hu
+copyright: Copyright &copy; 2024 Kangying Hu
 #[Config]
 #[Repo Config]
 repo_url: https://github.com/cxyhuky/cxyhuky.github.io 
@@ -18,7 +18,21 @@ extra:
         - icon: fontawesome/solid/paper-plane
           link: mailto:cxyhuky@gmail.com
 
-
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - footnotes
+  - admonition    
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 #[UI]
 theme:
@@ -26,6 +40,7 @@ theme:
     favicon: assets/logo/cxyhuky-icon.png
     palette:
         primary: indigo
+    custom_dir: docs/templates
     icon:
         logo: material/state-machine
         repo: fontawesome/brands/github         #指定仓库图标
@@ -39,6 +54,7 @@ theme:
         - navigation.prune
         - navigation.sections
         - search.suggest
+        - content.code.annotate
 
 plugins:
   - autorefs
@@ -73,6 +89,10 @@ nav:
         - se/index.md
     - Reading:
         - reading/index.md
+        - EffectiveJava:
+            - reading/effectivejava/methods-common-to-all-objects.md
+        - 图解HTTP:
+            - reading/httpdiagram/created.md
     - Bugs Archive:
         - bugs-archive/index.md
     - Tools:
