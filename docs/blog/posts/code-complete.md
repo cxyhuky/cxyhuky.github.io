@@ -1,5 +1,5 @@
 ---
-title: code-complete
+title: 代码大全
 draft: false
 authors: [huyi]
 date: 2024-08-10
@@ -8,7 +8,6 @@ description: 记录并总结常见技术概念和技术知识。
     以下所言，或来自读书笔记，或来自书籍的勾画，或只是回忆...作为参考。
 categories:
   - 随笔
-  - 概念与术语
 ---
 
 记录一些自己了解到的不懂的概念和名词，包含但不限于计算机科学、数据库、经济学等。 <!-- more -->
