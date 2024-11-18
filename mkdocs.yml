@@ -101,6 +101,8 @@ nav:
             - reading/effectivejava/methods-common-to-all-objects.md
         - 图解HTTP:
             - reading/httpdiagram/created.md
+        - Redis核心技术与实战:
+            - reading/rediscore/disk-persistence.md
     # - Bugs Archive:
     #     - bugs-archive/index.md
     # - Tools:
