@@ -103,5 +103,7 @@ nav:
             - reading/computer-newworking(a-top-down-approach)/video-stream-and-cdn.md
     - Software Engineering:
         - se/index.md
+        - Redis核心技术与实战:
+            - reading/rediscore/disk-persistence.md
     - Blog:
         - blog/index.md
