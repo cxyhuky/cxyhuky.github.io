@@ -1,6 +1,6 @@
-growing...
+Growing...
 
-## MYBLOG 
+## JosephHu's Website
 
 https://cxyhuky.cn
 
