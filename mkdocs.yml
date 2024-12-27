@@ -93,17 +93,15 @@ nav:
             - cs/network/data-link-layer.md
         - OS:
             - cs/os/learn.md
-    - Software Engineering:
-        - se/index.md
     - Reading:
         - reading/index.md
         - EffectiveJava:
             - reading/effectivejava/methods-common-to-all-objects.md
         - 图解HTTP:
             - reading/httpdiagram/created.md
-    # - Bugs Archive:
-    #     - bugs-archive/index.md
-    # - Tools:
-    #     - tools/index.md
+        - 计算机网络（自顶向下方法）:
+            - reading/computer-newworking(a-top-down-approach)/video-stream-and-cdn.md
+    - Software Engineering:
+        - se/index.md
     - Blog:
         - blog/index.md

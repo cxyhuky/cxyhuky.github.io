@@ -1,6 +1,6 @@
 # About
 
-Hello，Welcome to cxyhuky's blog.
+Hello，Welcome to cxyhuky's Website.
 
 I am a server-side programmer.
 

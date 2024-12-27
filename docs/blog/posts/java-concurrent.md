@@ -1,17 +1,15 @@
 ---
-title: 并发
+title: 并发编程
 draft: false
 authors: [huyi]
 date: 2024-09-12
 slug: juc
-description: 关于Java并发编程的一些知识总结与整理
-    以下所言，或来自读书笔记，或来自书籍的勾画，或只是回忆...作为参考。
 categories:
-  - 笔记
+  - 学习笔记
   - 并发
 ---
 
-悲观锁、乐观锁、CAS、线程池的一些笔记记录 <!-- more -->
+关于悲观锁&乐观锁、CAS以及线程池的解析与总结笔记 <!-- more -->
 
 # Java并发
 
