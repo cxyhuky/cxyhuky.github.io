@@ -10,31 +10,31 @@
         <meta name="author" content="Kangying Hu">
       
       
-        <link rel="canonical" href="https://cxyhuky.github.io/cs/">
+        <link rel="canonical" href="https://cxyhuky.github.io/se/middleware/redis/disk-persistence/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../../../">
       
       
-        <link rel="next" href="network/application-layer/">
+        <link rel="next" href="../sentinel/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../assets/logo/cxyhuky-icon.png">
+      <link rel="icon" href="../../../../assets/logo/cxyhuky-icon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
-        <title>Computer Science - CXYHUKY</title>
+        <title>磁盘持久化 - CXYHUKY</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#computer-science" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -93,7 +93,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="CXYHUKY" class="md-header__button md-logo" aria-label="CXYHUKY" data-md-component="logo">
+    <a href="../../../.." title="CXYHUKY" class="md-header__button md-logo" aria-label="CXYHUKY" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.27 17.05A2.991 2.991 0 0 1 4 22c-1.66 0-3-1.34-3-3s1.34-3 3-3c.18 0 .36 0 .53.05l3.07-5.36-1.74-.99 4.09-1.12 1.12 4.09-1.74-.99-3.06 5.37M20 16c-1.3 0-2.4.84-2.82 2H11v-2l-3 3 3 3v-2h6.18c.42 1.16 1.52 2 2.82 2 1.66 0 3-1.34 3-3s-1.34-3-3-3m-8-8c.18 0 .36 0 .53-.05l3.07 5.36-1.74.99 4.09 1.12 1.12-4.09-1.74.99-3.06-5.37A2.991 2.991 0 0 0 12 2c-1.66 0-3 1.34-3 3s1.34 3 3 3Z"/></svg>
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Computer Science
+              磁盘持久化
             
           </span>
         </div>
@@ -190,7 +190,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -205,13 +205,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../cs/" class="md-tabs__link">
           
   
     
@@ -231,7 +229,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../reading/" class="md-tabs__link">
+        <a href="../../../../reading/" class="md-tabs__link">
           
   
     
@@ -247,11 +245,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../se/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
           
   
     
@@ -271,7 +271,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../blog/" class="md-tabs__link">
+        <a href="../../../../blog/" class="md-tabs__link">
           
   
     
@@ -312,7 +312,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="CXYHUKY" class="md-nav__button md-logo" aria-label="CXYHUKY" data-md-component="logo">
+    <a href="../../../.." title="CXYHUKY" class="md-nav__button md-logo" aria-label="CXYHUKY" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.27 17.05A2.991 2.991 0 0 1 4 22c-1.66 0-3-1.34-3-3s1.34-3 3-3c.18 0 .36 0 .53.05l3.07-5.36-1.74-.99 4.09-1.12 1.12 4.09-1.74-.99-3.06 5.37M20 16c-1.3 0-2.4.84-2.82 2H11v-2l-3 3 3 3v-2h6.18c.42 1.16 1.52 2 2.82 2 1.66 0 3-1.34 3-3s-1.34-3-3-3m-8-8c.18 0 .36 0 .53-.05l3.07 5.36-1.74.99 4.09 1.12 1.12-4.09-1.74.99-3.06-5.37A2.991 2.991 0 0 0 12 2c-1.66 0-3 1.34-3 3s1.34 3 3 3Z"/></svg>
@@ -342,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,8 +359,6 @@
       
   
   
-    
-  
   
   
     
@@ -377,232 +375,35 @@
     
     
       
-        
-        
-      
       
         
       
     
     
       
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
+  
+  
+    <a href="../../../../cs/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     Computer Science
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Computer Science
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
       
-        
+        <span class="md-nav__icon md-icon"></span>
       
-        
-      
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Network
-  </span>
+    </a>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            Network
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="network/application-layer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    应用层
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="network/data-link-layer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    数据链路层
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    OS
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
-            <span class="md-nav__icon md-icon"></span>
-            OS
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="os/learn/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    操作系统
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -645,7 +446,7 @@
         
   
   
-    <a href="../reading/" class="md-nav__link">
+    <a href="../../../../reading/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -668,6 +469,8 @@
       
   
   
+    
+  
   
   
     
@@ -682,35 +485,318 @@
     
     
       
+        
+        
+      
       
         
       
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
-  
-  
-    <a href="../se/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Software Engineering
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
       
-        <span class="md-nav__icon md-icon"></span>
+        
       
-    </a>
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    中间件
+  </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            中间件
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Redis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    磁盘持久化
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    磁盘持久化
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aof" class="md-nav__link">
+    <span class="md-ellipsis">
+      AOF
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AOF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      重写机制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      写时复制技术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      快照的频率
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      混合持久化
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sentinel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    哨兵机制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -751,7 +837,7 @@
         
   
   
-    <a href="../blog/" class="md-nav__link">
+    <a href="../../../../blog/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -790,6 +876,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aof" class="md-nav__link">
+    <span class="md-ellipsis">
+      AOF
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AOF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      重写机制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      写时复制技术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      快照的频率
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      混合持久化
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -806,7 +966,112 @@
   
 
 
-<h1 id="computer-science">Computer Science</h1>
+<h1 id="_1">磁盘持久化</h1>
+<details class="tip" open="open">
+<summary>前言</summary>
+<p>本文主要介绍redis中的持久化相关技术，redis的持久化技术用于避免内存数据丢失</p>
+</details>
+<h2 id="aof">AOF</h2>
+<p>AOF（Append Only File）日志是Redis数据持久化的方式之一，它属于<strong>写后日志</strong>（命令执行完再记录日志，和数据库中的<strong>写前日志</strong>（WAL）刚好相反）</p>
+<p><strong>写后日志的好处</strong>：</p>
+<ol>
+<li><strong>天然的过滤错误命令（只有正常执行的命令才会走到日志存储这里）</strong></li>
+<li><strong>不阻塞写操作（因为日志是命令执行后才执行）</strong></li>
+</ol>
+<p>AOF存在的两个风险：</p>
+<ol>
+<li>刚执行完写命令，还未记录日志（写盘），系统宕机了</li>
+<li>AOF在主线程中执行，如果写盘太慢，会阻塞后面的操作也无法执行</li>
+</ol>
+<p>仔细观察，会发现这两个风险都与<strong>写盘</strong>操作（时机）有关，如果能控制写命令执行完后的AOF写盘时机，就可以解除这两个风险，AOF提供了三种写盘策略：</p>
+<ul>
+<li><strong>Always，同步写回</strong>：每个写命令执行完，立马同步日志到磁盘</li>
+<li><strong>Everysec，每秒写回</strong>：写命令执行完，先把日志写入到AOF内存缓冲区，每隔一秒将缓冲区数据写入磁盘</li>
+<li><strong>No，操作系统控制的写回</strong>：写命令执行完，先把日志写入到AOF内存缓冲区，由操作系统决定何时写入磁盘</li>
+</ul>
+<p>三种策略的优缺点：</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>写回时机</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Always</td>
+<td>同步写回</td>
+<td>可靠性高，数据基本不丢失</td>
+<td>每个写命令都要落盘，性能影响较大</td>
+</tr>
+<tr>
+<td>Everysec</td>
+<td>每秒写回</td>
+<td>性能适中</td>
+<td>宕机时丢失1s内数据</td>
+</tr>
+<tr>
+<td>No</td>
+<td>操作系统控制写回</td>
+<td>性能好</td>
+<td>宕机时丢失数据较多</td>
+</tr>
+</tbody>
+</table>
+<p>由于AOF日志会记录所有的写命令，所以AOF文件会越来越大，主要有以下几个性能问题：</p>
+<ol>
+<li>系统对文件大小有限制，无法保存过大文件</li>
+<li>文件太大，每次追加内容时效率也低</li>
+<li>若发生宕机，需要使用AOF文件恢复数据，日志文件太大，恢复数据较慢且需要一个一个执行写命令</li>
+</ol>
+<h3 id="_2">重写机制</h3>
+<p>鉴于以上种种问题（基本是由于文件过大导致的），AOF提供了<strong>重写机制</strong>：</p>
+<p>重写机制具有"<strong>多变一</strong>"功能，也就是说，旧日志文件中的多条写命令，在重写后的新日志中变成一条命令，在使用AOF恢复数据时，只需要执行这一条命令也可以正确的恢复数据</p>
+<p><font color="darkred">AOF重写日志会阻塞吗？</font></p>
+<p>不会，与 AOF 日志由主线程写回不同，重写过程由后台子进程bgrewriteaof来完成，也是为了避免主线程阻塞，导致数据库性能下降</p>
+<p>AOF重写的过程可以总结为：<strong>"一个拷贝，两处日志"</strong></p>
+<p>一个拷贝是指：在进行重写时，主线程fork出后台的<code>bgrewriteaof</code>子进程，<code>fork</code>会把主线程的内存拷贝一份给<code>bgrewriteaof</code>，里面就包含了数据库的最新数据，然后<code>bgrewriteaof</code>在不影响主线程的情况下，实现日志的重写操作，并生成新的日志重写文件</p>
+<p>两处日志：</p>
+<ul>
+<li>第一处：主线程未被阻塞，仍然可以执行写操作，仍然会被记录AOF日志（这里Redis会将日志写入缓冲区）</li>
+<li>第二处：新的重写日志，主线程目前执行的写操作，也会被copy一份到重写日志的缓冲区，当完成日志重写后，重写日志会将缓冲区中的内容写入到重写日志中，以保证数据库最新状态的记录，此时可以使用重写日志文件替换旧日志文件了</li>
+</ul>
+<h2 id="rdb">RDB</h2>
+<p>前面了解到<strong>AOF是以日志文件的形式</strong>进行持久化，日志文件太大会影响数据恢复的时间（因为需要把日志中的命令都执行一遍），下面介绍另外一种持久化方案：<strong>内存快照（Redis Database，RDB）</strong>。</p>
+<p>与AOF相比，RDB<strong>记录的是某一时刻的数据</strong>，并不是操作，所以在数据恢复时可以直接把RDB文件读入内存，恢复相对比AOF的写命令快</p>
+<p>内存快照需要考虑的两个点：</p>
+<ul>
+<li>对哪些数据进行快照？这关系到快照的执行效率</li>
+<li>做快照时，数据还能被增删改吗？（Redis是否被阻塞，能否同时正常的处理请求？）</li>
+</ul>
+<p>针对第一个点：RDB执行的是<strong>全量复制</strong>，将内存中所有的数据都记录到磁盘中</p>
+<p>第二个问题：执行快照时，是否会阻塞主进程（或者说是否影响redis的增删改？）</p>
+<p>redis提供了两种命令来生成RDB文件，分别是save和bgsave</p>
+<ul>
+<li><strong>save</strong>：在主线程中执行，会导致阻塞（影响写操作）</li>
+<li><strong>bgsave</strong>：创建一个子进程，专门用于写RDB文件，避免了主线程的阻塞（Redis RDB文件生成的默认配置）</li>
+</ul>
+<p>执行快照操作时，还可以对redis进行写操作吗？因为此时的数据正在写入RDB文件中</p>
+<p>这个问题很重要，其实，在执行RDB时，主线程虽然并未阻塞，但是为了数据完整性，它只能对外提供读操作，而不能提供写操作，因为不能修改正在执行快照（RDB）的数据。</p>
+<h3 id="_3">写时复制技术</h3>
+<p>为了快照而暂停写操作，肯定是不能被接受的，此时，redis会借助操作系统提供的<strong>写时复制技术（Copy-On-Write，COW）</strong>，在执行快照的同时，正常处理写操作。</p>
+<p>简单来说，bgsave子进程由主线程fork生成的，可以<strong>共享主线程的所有内存数据</strong>。bgsave子进程运行后，开始读取主线程的内存数据，并把它们写入RDB文件。此时如果发生读操作，那么主线程和bgsave子进程相互不影响，但是，<strong>如果主线程要修改一块数据，那么这块数据就会被复制一份，生成该数据的副本，然后主线程在这个数据副本上进行修改。同时，bgsave子进程可以继续把原来的数据写入RDB文件。</strong></p>
+<p>既保证了快照的完整性，也允许主线程同时对数据进行修改，避免了对正常业务的影响。</p>
+<h3 id="_4">快照的频率</h3>
+<p>多久做一次快照，快照间隔短，则丢失的数据相对较少，但是间隔短意味着频率高，就会导致磁盘IO的频率高，进而影响到性能。</p>
+<p>主进程fork生成bgsave子进程时，会阻塞主线程一小会，频繁的进行快照会导致频繁的fork出bgsave子进程，进而导致主线程频繁产生阻塞（所以在redis中如果有一个bgsave在运行，就不会再启动第二个bgsave子进程）</p>
+<p>那么，是否有其他较好的方案呢？</p>
+<h2 id="_5">混合持久化</h2>
+<p>混合持久化是Redis4.0新引入的持久化策略，结合了RDB的快速恢复和AOF的数据完整性的优点，它首先以RDB格式保存当前数据状态，然后继续以AOF格式记录新的写操作，确保数据完整性并优化恢复速度</p>
+<p>混合持久化的 RDB 内容只会在 <strong>AOF 重写</strong> 时被写入 AOF 文件中，因为该技术的目的之一也是改进AOF重写后文件仍然较大且恢复较慢的特点。</p>
+<p>要启动混合持久化，需要AOF和RDB同时开启的前提下，在通过以下选项开启：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>aof-use-rdb-preamble<span class="w"> </span>yes<span class="w"> </span><span class="c1">#yes表示开启</span>
+</code></pre></div>
+<p>混合持久化的AOF重写和普通的AOF重写的区别：</p>
+<p>在不使用混合持久化的情况下，普通的AOF重写是通过读取当前的内存数据并记录达到这一状态所需的最少命令来减少AOF文件的大小。</p>
+<p>而混合持久化的AOF重写时，会首先将当前数据集以RDB格式快照的形式写入新AOF文件的首部，然后再追加新的写命令到文件末尾。</p>
 
 
 
@@ -943,10 +1208,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.path", "navigation.instant", "navigation.indexes", "navigation.prune", "navigation.sections", "search.suggest", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.path", "navigation.instant", "navigation.indexes", "navigation.prune", "navigation.sections", "search.suggest", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
