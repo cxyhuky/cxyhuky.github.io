@@ -2,78 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cxyhuky.github.io/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/blog/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/blog/2024/08/10/code-complete/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/blog/2024/09/12/juc/</loc>
-         <lastmod>2024-12-27</lastmod>
-    </url>
-    <url>
-         <loc>https://cxyhuky.github.io/bugs-archive/</loc>
-         <lastmod>2024-12-27</lastmod>
-    </url>
-    <url>
-         <loc>https://cxyhuky.github.io/bugs-archive/dubbo/dubbo-bugs/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/cs/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/cs/network/application-layer/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/cs/network/data-link-layer/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/cs/os/learn/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/reading/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cxyhuky.github.io/reading/computer-newworking%28a-top-down-approach%29/video-stream-and-cdn/</loc>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/reading/effectivejava/methods-common-to-all-objects/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/reading/httpdiagram/created/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cxyhuky.github.io/reading/rediscore/disk-persistence/</loc>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/se/</loc>
-         <lastmod>2024-12-27</lastmod>
-    </url>
-    <url>
-         <loc>https://cxyhuky.github.io/tools/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cxyhuky.github.io/blog/category/%E7%AC%94%E8%AE%B0/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <loc>https://cxyhuky.github.io/blog/category/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cxyhuky.github.io/blog/category/%E5%B9%B6%E5%8F%91/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cxyhuky.github.io/blog/category/%E9%9A%8F%E7%AC%94/</loc>
-         <lastmod>2024-12-27</lastmod>
+         <loc>https://cxyhuky.github.io/blog/category/%E7%BB%88%E7%94%9F%E5%AD%A6%E4%B9%A0/</loc>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cxyhuky.github.io/blog/category/%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%90%8D%E8%AF%8D/</loc>
+         <lastmod>2025-01-27</lastmod>
+         <changefreq>daily</changefreq>
     </url>
 </urlset>
